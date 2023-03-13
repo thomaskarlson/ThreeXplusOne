@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace ThreeXplusOne
 {
@@ -14,7 +15,7 @@ namespace ThreeXplusOne
 
             Console.Write("Pick a number, any number: ");
             var inp = Console.ReadLine();
-            if (ulong.TryParse(inp, out startingNumber))
+            if (BigInteger.TryParse(inp, out BigInteger startingNumber))
             {
                 var number = new HailstoneNumber(startingNumber);
                 Console.WriteLine($"Number set    : {number.NumberSetString()}");
